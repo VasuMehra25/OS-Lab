@@ -1,0 +1,215 @@
+/* ConceptPageLayout Styling */
+.concept-page-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-6) var(--space-12);
+}
+
+@media (max-width: 768px) {
+  .concept-page-container {
+    padding: var(--space-4) var(--space-4) var(--space-8);
+  }
+}
+
+/* Breadcrumbs */
+.concept-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.crumb-link {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.crumb-link:hover {
+  color: var(--pastel-green-accent);
+}
+
+.crumb-separator {
+  color: var(--text-faint);
+}
+
+.crumb-category {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.crumb-current {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* Header Main */
+.concept-header-main {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.btn-back:hover {
+  background: #DCE8E0;
+  color: var(--text-primary);
+  border-color: var(--pastel-green-accent);
+  transform: translateX(-2px);
+  filter: brightness(0.90) contrast(1.05);
+}
+
+.concept-title-group {
+  flex: 1;
+}
+
+.concept-badge-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.concept-badge {
+  background: var(--pastel-green-bg);
+  border: 1px solid var(--pastel-green-border);
+  color: var(--pastel-green-text);
+  font-size: 0.76rem;
+}
+
+.concept-category-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.concept-completed-badge {
+  background: var(--pastel-green-bg);
+  border: 1px solid var(--pastel-green-border);
+  color: var(--pastel-green-text);
+  font-size: 0.76rem;
+}
+
+.concept-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: var(--space-2);
+}
+
+.concept-lead {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 860px;
+}
+
+/* Why It Matters Callout */
+.why-it-matters-banner {
+  background: var(--pastel-blue-bg);
+  border: 1px solid var(--pastel-blue-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--pastel-blue-text);
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.banner-content {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .why-it-matters-banner {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+}
+
+/* Simulation Workspace */
+.simulation-workspace {
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-toolbox-slot {
+  margin-bottom: var(--space-4);
+}
+
+.simulation-canvas-area {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  overflow-x: auto;
+}
+
+.simulation-metrics-area {
+  margin-bottom: var(--space-4);
+}
+
+/* Takeaway card */
+.concept-key-takeaway {
+  background: #FFFDF9;
+  border: 1px solid #FEEEC8;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+.takeaway-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #B45309;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.takeaway-text {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #78350F;
+  font-weight: 500;
+}
+

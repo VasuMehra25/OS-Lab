@@ -1,0 +1,308 @@
+/* Agentation Floating Toolbar Styling */
+
+.agentation-floating-bar {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: calc(100% - 32px);
+  max-width: 980px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 2px solid var(--pastel-green-accent);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 36px rgba(15, 40, 24, 0.18), 0 0 0 1px rgba(24, 165, 88, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agentation-floating-bar.is-disabled {
+  border-color: #DAEEE3;
+  box-shadow: 0 6px 20px rgba(15, 40, 24, 0.08);
+}
+
+.agentation-floating-bar.is-minimized {
+  max-width: 320px;
+}
+
+.agentation-floating-bar.is-minimized .agentation-bar-center {
+  display: none;
+}
+
+.agentation-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 10px 18px;
+}
+
+/* Left Group */
+.agentation-bar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.agentation-logo-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pastel-green-bg);
+  border: 1.5px solid var(--pastel-green-border);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+}
+
+.agentation-icon {
+  color: var(--pastel-green-accent-dark);
+}
+
+.agentation-brand-title {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--pastel-green-text);
+  letter-spacing: -0.01em;
+}
+
+.agentation-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.dot-active {
+  background: var(--pastel-green-accent);
+  box-shadow: 0 0 0 3px rgba(24, 165, 88, 0.25);
+  animation: pulseGreenDot 2s infinite ease-in-out;
+}
+
+.status-dot.dot-inactive {
+  background: #A0B3A6;
+}
+
+@keyframes pulseGreenDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.8;
+  }
+}
+
+/* Center Group */
+.agentation-bar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+  padding: 0 var(--space-2);
+}
+
+.agentation-tag-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pastel-amber-bg);
+  border: 1.5px solid var(--pastel-amber-border);
+  padding: 5px 12px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: popTag 0.15s ease-out;
+}
+
+@keyframes popTag {
+  from {
+    transform: scale(0.96);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tag-preview-prefix {
+  font-weight: 800;
+  color: var(--pastel-amber-text);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tag-preview-code {
+  font-family: var(--font-family-mono);
+  font-weight: 800;
+  color: #5A4000;
+  background: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--pastel-amber-border);
+}
+
+.tag-hint-alt {
+  font-size: 0.75rem;
+  color: var(--pastel-amber-text);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.agentation-idle-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.sparkle-hint {
+  color: var(--pastel-amber-accent);
+}
+
+.agentation-off-hint {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.agentation-copied-pill {
+  margin-left: 10px;
+  background: var(--pastel-green-accent);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Right Controls */
+.agentation-bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.agentation-switch-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.agentation-switch-btn.switch-on {
+  background: var(--pastel-green-accent);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(24, 165, 88, 0.35);
+}
+
+.agentation-switch-btn.switch-off {
+  background: #E8F0EA;
+  color: #556B5C;
+  border-color: #CFDFD4;
+}
+
+.switch-slider-track {
+  width: 28px;
+  height: 16px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  position: relative;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.agentation-switch-btn.switch-on .switch-slider-track {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.switch-slider-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agentation-switch-btn.switch-on .switch-slider-thumb {
+  transform: translateX(12px);
+  background: #FFFFFF;
+}
+
+.switch-text {
+  letter-spacing: 0.03em;
+}
+
+.agentation-minimize-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F0F7F2;
+  border: 1px solid #D1E5D8;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.agentation-minimize-btn:hover {
+  background: #E0EFE6;
+  color: var(--text-primary);
+}
+
+/* Global Outline when Agentation is active */
+body.agentation-mode-active [data-component]:not(.agentation-floating-bar):not([data-component="app-layout"]) {
+  transition: outline 0.15s ease, box-shadow 0.15s ease;
+}
+
+body.agentation-mode-active [data-component]:hover:not(.agentation-floating-bar):not([data-component="app-layout"]):not(body):not(html) {
+  outline: 2.5px dashed var(--pastel-green-accent) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 12px rgba(24, 165, 88, 0.2) !important;
+  cursor: crosshair !important;
+}
+
+@media (max-width: 680px) {
+  .agentation-floating-bar {
+    bottom: 10px;
+    width: calc(100% - 20px);
+  }
+  .agentation-brand-title {
+    display: none;
+  }
+  .agentation-bar-center {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,343 @@
+/* CpuSchedulingSim Styling */
+.cpu-scheduling-sim {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.scheduling-config-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.algorithm-toggle-group {
+  display: flex;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 3px;
+  gap: 3px;
+}
+
+.algo-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.algo-btn.active {
+  background: var(--bg-surface);
+  color: var(--pastel-green-accent);
+  box-shadow: var(--shadow-xs);
+  border: 1px solid var(--border-light);
+}
+
+.quantum-control-box {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.quantum-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.quantum-slider {
+  cursor: pointer;
+  accent-color: var(--pastel-green-accent);
+}
+
+.quantum-value-badge {
+  background: var(--pastel-green-bg);
+  border: 1px solid var(--pastel-green-border);
+  color: var(--pastel-green-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* Gantt Chart */
+.gantt-chart-section {
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.gantt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.gantt-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.gantt-icon {
+  color: var(--pastel-green-accent);
+}
+
+.gantt-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gantt-clock {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.gantt-timeline-container {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.gantt-empty {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: var(--space-4) 0;
+  text-align: center;
+}
+
+.gantt-blocks-track {
+  display: flex;
+  min-height: 48px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+}
+
+.gantt-block {
+  min-width: 38px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform var(--transition-fast);
+}
+
+.gantt-block:hover {
+  filter: brightness(0.95);
+}
+
+.gantt-pid {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--text-inverse);
+}
+
+.gantt-idle .gantt-pid {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.gantt-tick-label {
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-family-mono);
+}
+
+.gantt-idle .gantt-tick-label {
+  color: var(--text-muted);
+}
+
+/* Split view */
+.scheduling-split-view {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .scheduling-split-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scheduling-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+}
+
+.sched-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sched-card-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sched-card-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Table */
+.processes-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.processes-data-table th {
+  text-align: left;
+  padding: 6px 8px;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+}
+
+.processes-data-table td {
+  padding: 8px;
+  border-top: 1px solid var(--border-light);
+}
+
+.row-active {
+  background: var(--pastel-green-bg);
+}
+
+.table-proc-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.74rem;
+}
+
+.table-input {
+  width: 50px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 3px 6px;
+  font-size: 0.8rem;
+  font-family: var(--font-family-mono);
+}
+
+.table-input:focus {
+  outline: none;
+  border-color: var(--pastel-green-accent);
+}
+
+.status-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.status-done {
+  background: var(--pastel-green-bg);
+  color: var(--pastel-green-text);
+}
+
+.status-running {
+  background: var(--pastel-blue-bg);
+  color: var(--pastel-blue-text);
+}
+
+.status-waiting {
+  background: var(--bg-surface-subtle);
+  color: var(--text-muted);
+}
+
+/* Ready Queue visualization */
+.ready-queue-visual-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-2);
+  background: var(--bg-surface-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+  overflow-x: auto;
+}
+
+.queue-empty-text {
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  font-style: italic;
+  margin: 0 auto;
+}
+
+.queue-token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.76rem;
+  min-width: 44px;
+}
+
+.queue-pos {
+  font-size: 0.62rem;
+  opacity: 0.85;
+}
+
+/* Metrics Strip */
+.scheduling-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.metric-box {
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-box-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.metric-box-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 2px;
+}
+

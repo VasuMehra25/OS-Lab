@@ -1,0 +1,204 @@
+/* KnowledgeCheck Styling */
+.knowledge-check-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.knowledge-check-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.kc-badge-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.kc-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--pastel-green-bg);
+  border: 1px solid var(--pastel-green-border);
+  color: var(--pastel-green-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kc-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.kc-subheading {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.kc-mastery-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--pastel-green-bg);
+  border: 1px solid var(--pastel-green-border);
+  color: var(--pastel-green-text);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.kc-question-box {
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.kc-question-text {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Options */
+.kc-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.kc-option-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  text-align: left;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  width: 100%;
+}
+
+.kc-option-item:hover {
+  background: #E0EBE3;
+  border-color: var(--pastel-green-accent);
+  transform: translateX(2px);
+  filter: brightness(0.90) contrast(1.05);
+}
+
+.kc-option-item.selected {
+  background: var(--pastel-green-bg);
+  border-color: var(--pastel-green-accent);
+  box-shadow: 0 0 0 2px rgba(125, 97, 226, 0.15);
+}
+
+.kc-option-item.correct {
+  background: var(--pastel-green-bg);
+  border-color: var(--pastel-green-accent);
+  color: var(--pastel-green-text);
+}
+
+.kc-option-item.incorrect {
+  background: var(--pastel-pink-bg);
+  border-color: var(--pastel-pink-accent);
+  color: var(--pastel-pink-text);
+}
+
+.option-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-medium);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.kc-option-item.selected .option-letter {
+  background: var(--pastel-green-accent);
+  color: var(--text-inverse);
+  border-color: var(--pastel-green-accent);
+}
+
+.option-text {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.option-icon-correct {
+  color: var(--pastel-green-accent);
+}
+
+.option-icon-incorrect {
+  color: var(--pastel-pink-accent);
+}
+
+.kc-action-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-check-answer {
+  min-width: 140px;
+}
+
+/* Feedback Banner */
+.kc-feedback-banner {
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  border: 1px solid;
+  margin-top: var(--space-4);
+}
+
+.banner-correct {
+  background: var(--pastel-green-bg);
+  border-color: var(--pastel-green-border);
+  color: var(--pastel-green-text);
+}
+
+.banner-incorrect {
+  background: var(--pastel-pink-bg);
+  border-color: var(--pastel-pink-border);
+  color: var(--pastel-pink-text);
+}
+
+.banner-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: 0.95rem;
+}
+
+.banner-explanation {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
